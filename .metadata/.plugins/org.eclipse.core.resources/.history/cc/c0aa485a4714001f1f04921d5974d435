@@ -1,0 +1,37 @@
+package demo;
+
+public class B extends A{
+	
+	 Integer num = 20;
+
+	    protected void display() {
+
+	        System.out.println("In Child class");
+
+	    }
+	    
+	    public static void main(String[] args) {
+	    	
+	    	A a=new B();
+	    	
+	    
+	    	
+	    	B b=new B();
+	    	b.display();
+	    	
+	    	
+	    	String s=new String("abc");
+	    	s="xyz";
+	    	s="poi"
+	    	System.out.println(s);
+	    	
+	    
+	    	
+	    	
+	    	
+	    	
+	    	
+			
+		}
+
+}

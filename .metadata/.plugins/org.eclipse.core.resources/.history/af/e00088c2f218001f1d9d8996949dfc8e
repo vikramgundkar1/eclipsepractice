@@ -1,0 +1,136 @@
+package sample;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+public class Target {
+
+	public static int[] sumOfTwoElementsFromArray(int[] arr, int target) {
+
+		String s = "vikramashokgundkar";
+
+		for (int i = 0; i <= s.length() - 1; i++) {
+			if (s.indexOf(s.charAt(i), s.indexOf(s.charAt(i)) + 1) == -1) {
+				System.out.println(s.charAt(i) + " is the first repeating character");
+				break;
+			}
+		}
+
+		Arrays.sort(arr);
+
+		int left = 0;
+		int right = arr.length - 1;
+
+		while (left < right) {
+			int sum = arr[left] + arr[right];
+			if (sum == target) {
+				System.out.println("The sum is 6 for" + arr[left] + " and " + arr[right]);
+				return new int[] { left, right };
+			} else if (sum < target) {
+				left++;
+
+			} else {
+				right--;
+			}
+
+		}
+		return new int[0];
+
+	}
+
+	public int[] twoSum(int[] nums, int target) {
+        
+
+        for(int i=0;i<=nums.length-2;i++)
+        {
+            for(int j=i+1;j<nums.length-1;j++)
+            {
+                if(nums[i]+nums[j]==target)
+                {
+                    return new int[] {i,j};
+                }
+            }
+
+        }
+        return new int[0];
+    }
+
+	
+	public int maxArea(int[] height) {
+        int max=0;
+        for(int i=0;i<=height.length-1;i++)
+        {
+
+            for(int j=i+1;j<height.length;j++)
+            {
+               int area=Math.min(height[i], height[j])*(j-i);
+                max=Math.max(max, area); 
+               
+            }
+        }
+        return max;
+	}
+
+		
+	
+	public static void main(String[] args) {
+		
+		LinkedHashMap<String, Integer> map=new LinkedHashMap<String, Integer>();
+		
+		map.put("Vikram", 1997);
+		map.put("Omkar", 1997);
+		map.put("Rushi", 1998);
+		map.put("Sharad", 1998);
+		map.put("Vitthal", 2004);
+		map.put("gavs", 1997);
+		map.put("Vikram", 2000);
+		
+		Set<Entry<String, Integer>> g = map.entrySet();
+		
+		Iterator i=g.iterator();
+		
+		while(i.hasNext())
+		{
+			System.out.println(i.next());
+		}
+				
+		Collection<Integer> values = map.values();
+		
+		System.out.println(values);
+		System.out.println("------");
+		for(Map.Entry<String, Integer> entry: map.entrySet())
+		{
+			System.out.println("key: "+entry.getKey()+" value:"+entry.getValue());
+		}
+		
+		List<Integer> list=Arrays.asList(1,2,37,4,3,1,2,4,5,6,7,8,9);
+		Collections.sort(list);
+		List elist = Collections.EMPTY_LIST;
+		Integer max = Collections.max(list);
+		System.out.println(max);
+		System.out.println(list);
+		
+		for(Integer s: list)
+		{
+			System.out.println(s);
+		}
+		
+		
+		int[] arr = { 1, 5, 7, 9, 4, 6, 2, 7, 0, 3, 5 };
+		int target = 6;
+		
+		System.out.println(arr[10]);
+
+		sumOfTwoElementsFromArray(arr, target);
+	}
+
+}

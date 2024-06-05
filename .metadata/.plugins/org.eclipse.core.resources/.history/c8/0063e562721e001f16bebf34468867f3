@@ -1,0 +1,77 @@
+package wissen;
+
+import java.util.Arrays;
+
+public class Employee {
+	
+	String name;
+	
+//	 nums1 = [1,2,3], nums2 = [2,5,6] Output: [1,2,2,3,5,6]
+//			 
+//			 Input: nums1 = [1], nums2 = [] Output: [1] 
+//			 
+//			Input: nums1 = [0], nums2 = [1] Output: [1]
+	
+	
+	
+	public static void main(String[] args) {
+		
+		
+		
+		
+		int nums1[]= {1,2,3};
+		int nums2[]= {2,5,6};
+		
+		int n1=nums1.length;
+		int n2=nums2.length;
+		
+		int output[]=new int[n1+n2];
+		
+		int i=0;int j=0;int k=0;
+		while(i<n1 && j<n2)
+		{
+			
+			if(nums1[i]<nums2[j])
+			{
+				
+				output[k++]=nums1[i++];
+				
+			}
+			else
+			{
+				output[k++]=nums2[j++];
+			}
+			
+			System.out.println(Arrays.toString(output));
+			
+		}
+//		int j=0;
+//		for(int i=0;i<=nums1.length-1;i++)
+//		{
+//						
+//		
+//			output[j]=nums1[i];
+//			
+//			j++;
+//		}
+//		int p=nums1.length;
+//		for(int k=0;k<=nums2.length-1;k++)
+//		{
+//			output[p]=nums2[k];
+//			p++;
+//		}
+//		
+//		Arrays.sort(output);
+//		System.out.println(Arrays.toString(output));
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+	
+
+}

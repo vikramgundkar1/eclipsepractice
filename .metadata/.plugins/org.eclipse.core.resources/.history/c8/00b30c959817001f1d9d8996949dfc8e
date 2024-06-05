@@ -1,0 +1,99 @@
+package demo;
+
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
+
+public class A {
+	
+	
+	
+	
+	
+
+    Integer num = 10;
+
+    public void display() throws FileNotFoundException {
+
+        System.out.println("In Parent class");
+    }
+    
+    public static void main(String[] args) {
+    	
+    	List<Practice> plist=new ArrayList<Practice>();
+    	List<Practice> mlist=new ArrayList<Practice>();
+    	plist.add(new Practice(1,"Vikram"));
+    	plist.add(new Practice(411,"Ashok"));
+    	plist.add(new Practice(3,"Gundkar"));
+    	plist.add(new Practice(411,"Dada"));
+    	
+    	
+    	
+    	long count = plist.stream().filter(t->t.getAge()>5).count();
+    	System.out.println(count);
+    	 	
+    	
+    	List<Integer> li=Arrays.asList(1,5,3,8,5,8,3);
+    	li.stream().sorted(Collections.reverseOrder()).forEach(System.out::println);
+    	
+    	li.stream().sorted(Comparator.naturalOrder());
+    	li.stream().max(Integer::compare);
+//    	System.out.println("---");
+//    	li.stream().sorted(Comparator.naturalOrder()).forEach(System.out::println); 
+//    	System.out.println("---");
+//    	li.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+//    	System.out.println("---");
+    	
+//    	plist.stream().sorted(Comparator.naturalOrder()).collect(Collectors.toList()).forEach(System.out::println);
+//    	System.out.println("IIIIII");  	
+//    	
+    	plist.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+    	System.out.println("IIIIII");  
+    	
+//    	plist.stream().sorted(Comparator.comparing(Practice::getName).reversed()).collect(Collectors.toList()).forEach(System.out::println);
+//    	System.out.println("))))");
+//    	Optional<Integer> max = plist.stream().map(m->m.getAge()).max(Integer::compare);
+//    	if(max.isPresent())
+//    	{
+//    		plist.stream().filter(g->g.age==max.get()).collect(Collectors.toList()).forEach(System.out::println);
+//    	}
+//    	else
+//    	{
+//    		System.out.println("There is now elements in list");
+//    	}
+//    	
+    	
+  // Remove Duplicates from Array
+    	
+    	int arr[]= {1,2,3,11,5,2,4,7,3,1,9};
+    	
+    	HashSet<Integer> hs=new HashSet();
+    	
+    	for(int i=0;i<=arr.length-1;i++)
+    	{
+    		if(!hs.contains(arr[i]))
+    		{
+    			hs.add(i);
+    		}
+    	}
+    	
+    	System.out.println(hs);
+    	
+    	
+    
+    
+    }
+
+	
+
+}
+
+
+	

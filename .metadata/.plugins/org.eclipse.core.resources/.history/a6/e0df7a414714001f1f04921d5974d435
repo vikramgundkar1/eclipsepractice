@@ -1,0 +1,12 @@
+package demo;
+
+public class A {
+
+    Integer num = 10;
+
+    private void display() {
+
+        System.out.println("In Parent class");
+    }
+
+}

@@ -1,0 +1,25 @@
+package educate;
+
+public class Problems {
+	
+	//Finding given String is palindrome or not
+	
+	public boolean isPalindrome(String s);
+	
+	{
+		int i=0;
+		int j=s
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		
+
+		
+		
+		
+	}
+
+}

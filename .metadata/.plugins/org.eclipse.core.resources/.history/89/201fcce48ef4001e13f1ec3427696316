@@ -1,0 +1,19 @@
+package today;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Implementation {
+
+	public static void main(String[] args) {
+		
+		
+		List<Employee> e=new ArrayList <Employee>();
+		
+		e.add(new Employee(1,"Vikram", 120000));
+		
+		
+		System.out.println(e.toString());
+		
+	}
+}

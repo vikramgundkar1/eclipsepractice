@@ -1,0 +1,20 @@
+package wissen;
+
+public class Practice {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Outer class main method");
+		
+		
+	}
+	
+	public class InnerClass{
+		
+		int age;
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package fis;
+
+public class AndroidOS extends MobileOS{
+
+	public AndroidOS(int passcode, String version) {
+		super(passcode);
+		this.version=version;
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public boolean unlock(int passcode) {
+		if(super.get)
+	}
+	
+	public int getCameraSound()
+	{
+		return 20;
+		
+	}
+
+	
+
+}

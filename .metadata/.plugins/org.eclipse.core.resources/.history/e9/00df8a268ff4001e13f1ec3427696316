@@ -1,0 +1,24 @@
+package today;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class Implementation {
+
+	public static void main(String[] args) {
+		
+		
+		List<Employee> e=new ArrayList <Employee>();
+		
+		e.add(new Employee(1,"Vikram", 120000));
+		
+		
+		e.stream().collect(Collectors.toList()).forEach(e-> {
+			System.out.println(e.geteName());
+			System.out.println(e.getId());
+			System.out.println(e.getSalary());
+		});
+		
+	}
+}

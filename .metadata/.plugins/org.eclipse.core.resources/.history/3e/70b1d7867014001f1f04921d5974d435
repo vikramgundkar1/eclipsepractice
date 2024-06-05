@@ -1,0 +1,76 @@
+package demo;
+
+public class B extends A {
+
+	Integer num = 20;
+
+	protected void display() {
+
+		System.out.println("In Child class");
+
+	}
+
+	public static StringBuilder getData(String input, int count, int[] arr) {
+		StringBuilder sb = new StringBuilder(input);
+
+		for (int i = 0; i < count; i++) {
+
+			if (arr[i] == 1) {
+				char temp = sb.charAt(0);
+				sb.setCharAt(0, sb.charAt(arr.length - 1));
+				sb.setCharAt(arr.length - 1, temp);
+				System.out.println(sb);
+
+			}
+
+			if (arr[i] == 2) {
+
+				int middle = sb.length() / 2;
+
+				String first = sb.substring(0, middle);
+				String last = sb.substring(middle, sb.length() - 1);
+
+				sb = new StringBuilder(last + first);
+				System.out.println(sb);
+
+			}
+
+		}
+
+		return sb;
+
+	}
+
+	public static void main(String[] args) {
+
+		A a = new B();
+
+		B b = new B();
+		b.display();
+
+		String s = new String("abc");
+		s = "xyz";
+		s = "poi";
+		System.out.println(s);
+
+		int[] arr = { 1, 2, 7, 9, 6 };
+		int sum = 8;
+
+		for (int i = 0; i <= arr.length - 2; i++) {
+
+			for (int j = i + 1; j <= arr.length - 1; j++) {
+
+				if (arr[i] + arr[j] == sum) {
+					System.out.println(arr[i] + "+" + arr[j]);
+				}
+
+			}
+		}
+		int[] arr1= {1,1,2};
+		String p = "MERCER";
+		
+		System.out.println(getData("MERCER", 3, arr1));
+
+	}
+
+}
